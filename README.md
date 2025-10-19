@@ -58,6 +58,4 @@ pandas, numpy, scikit-learn, xgboost, lime, shap, pyqt5, streamlit, matplotlib, 
 ├── model.pkl                → Eğitilmiş model
 ├── scaler.pkl               → Veri ölçekleyici
 ├── logs/                    → Anlık veri akış kayıtları
-└── reports/
-
-
+└── reports/                 → Günlük raporlar (Excel)
