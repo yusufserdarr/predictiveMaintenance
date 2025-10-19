@@ -1,7 +1,7 @@
-# 🧠 Predictive Maintenance System (Makine Öğrenimi ile Erken Arıza Tespiti)
+# 🔧 Predictive Maintenance System (Makine Öğrenimi ile Erken Arıza Tespiti)
 
-Bu proje, lojistik ve endüstriyel sistemlerde kullanılan makine bileşenlerinin arıza yapmadan önceki kalan ömürlerini (**RUL – Remaining Useful Life**) tahmin ederek kestirimci bakım planlaması yapmayı amaçlar.  
-Makine öğrenimi, veri akışı simülasyonu, model açıklanabilirliği (**LIME & SHAP**) ve dashboard arayüzleri bir arada kullanılmıştır.
+Bu proje, lojistik ve endüstriyel sistemlerde kullanılan makine bileşenlerinin **arıza yapmadan önceki kalan ömürlerini (RUL – Remaining Useful Life)** tahmin ederek **kestirimci bakım planlaması** yapmayı amaçlar.  
+Makine öğrenimi, veri akışı simülasyonu, model açıklanabilirliği (LIME & SHAP) ve dashboard arayüzleri bir arada kullanılmıştır.
 
 ---
 
@@ -12,15 +12,14 @@ Makine öğrenimi, veri akışı simülasyonu, model açıklanabilirliği (**LIM
 - `logs/stream.csv` dosyasına her saniye yeni veri yazar.
 
 ### 🔹 Model Tahmini (XGBoost)
-- Eğitilen model, her veri noktasının kalan ömrünü (**RUL**) tahmin eder.  
+- Eğitilen model, her veri noktasının kalan ömrünü (RUL) tahmin eder.  
 - `model.pkl` ve `scaler.pkl` dosyalarıyla tahmin süreci otomatik yapılır.
 
 ### 🔹 Bakım Planlama Modülü
-RUL değerine göre bakım durumu belirlenir:
-
-- 🟢 **Normal**  
-- 🟠 **Planlı bakım önerisi**  
-- 🔴 **Acil bakım gerekli**
+RUL değerine göre bakım durumunu belirler:  
+- 🟢 Normal  
+- 🟠 Planlı bakım önerisi  
+- 🔴 Acil bakım gerekli
 
 ### 🔹 Veri Kaydı ve Günlük Raporlama
 - Her tahmin otomatik olarak `logs/predictions.csv` dosyasına kaydedilir.  
@@ -36,15 +35,15 @@ RUL değerine göre bakım durumu belirlenir:
 
 ---
 
+
 ## ⚙️ Kurulum
 
 ```bash
 # Gerekli kütüphaneleri yükle
 pip install -r requirements.txt
+pandas, numpy, scikit-learn, xgboost, lime, shap, pyqt5, streamlit, matplotlib, openpyxl
 
-##  Gerekli Paketler
-pandas, numpy, scikit-learn, xgboost, lime, shap, pyqt5, streamlit, matplotlib, openpyxl 
-```
+
 ## 📁 Proje Yapısı
 
 .
@@ -59,4 +58,5 @@ pandas, numpy, scikit-learn, xgboost, lime, shap, pyqt5, streamlit, matplotlib, 
 ├── model.pkl                → Eğitilmiş model
 ├── scaler.pkl               → Veri ölçekleyici
 ├── logs/                    → Anlık veri akış kayıtları
-'''
+
+
