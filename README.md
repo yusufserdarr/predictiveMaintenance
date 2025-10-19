@@ -43,8 +43,8 @@ RUL değerine göre bakım durumu belirlenir:
 pip install -r requirements.txt
 
 ##  Gerekli Paketler
-pandas, numpy, scikit-learn, xgboost, lime, shap, pyqt5, streamlit, matplotlib, openpyxl
-
+pandas, numpy, scikit-learn, xgboost, lime, shap, pyqt5, streamlit, matplotlib, openpyxl 
+```
 ## 📁 Proje Yapısı
 .
 ├── app.py                   → Streamlit dashboard
