@@ -45,3 +45,18 @@ pip install -r requirements.txt
 ##  Gerekli Paketler
 pandas, numpy, scikit-learn, xgboost, lime, shap, pyqt5, streamlit, matplotlib, openpyxl
 
+## 📁 Proje Yapısı
+.
+├── app.py                   → Streamlit dashboard
+├── main_gui.py              → PyQt5 masaüstü arayüzü
+├── model_train.py           → Model eğitimi
+├── maintenance.py           → Bakım planlama modülü
+├── reporting.py             → Loglama ve Excel raporlama
+├── sim_stream.py            → Gerçek zamanlı veri akışı simülasyonu
+├── lime_explain.py          → LIME açıklamaları
+├── shap_analysis.py         → SHAP açıklamaları
+├── model.pkl                → Eğitilmiş model
+├── scaler.pkl               → Veri ölçekleyici
+├── logs/                    → Anlık veri akış kayıtları
+└── reports/                 → Günlük raporlar (Excel)
+
