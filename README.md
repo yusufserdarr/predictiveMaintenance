@@ -41,3 +41,7 @@ RUL değerine göre bakım durumu belirlenir:
 ```bash
 # Gerekli kütüphaneleri yükle
 pip install -r requirements.txt
+
+##  Gerekli Paketler
+pandas, numpy, scikit-learn, xgboost, lime, shap, pyqt5, streamlit, matplotlib, openpyxl
+
