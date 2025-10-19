@@ -46,6 +46,7 @@ pip install -r requirements.txt
 pandas, numpy, scikit-learn, xgboost, lime, shap, pyqt5, streamlit, matplotlib, openpyxl 
 ```
 ## 📁 Proje Yapısı
+
 .
 ├── app.py                   → Streamlit dashboard
 ├── main_gui.py              → PyQt5 masaüstü arayüzü
@@ -58,4 +59,4 @@ pandas, numpy, scikit-learn, xgboost, lime, shap, pyqt5, streamlit, matplotlib, 
 ├── model.pkl                → Eğitilmiş model
 ├── scaler.pkl               → Veri ölçekleyici
 ├── logs/                    → Anlık veri akış kayıtları
-└── reports/                 → Günlük raporlar (Excel)
+
