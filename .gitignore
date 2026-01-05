@@ -35,6 +35,9 @@ htmlcov/
 .coverage
 coverage.xml
 
+# LIME HTML Reports (otomatik oluşturulur)
+reports/*.html
+
 # OS
 .DS_Store
 Thumbs.db
