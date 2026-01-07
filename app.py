@@ -110,21 +110,14 @@ def load_models(model_name="Random Forest"):
             st.error(f"Model yükleme hatası: {e}")
             st.stop()
 
-# Başlık ve model seçimi
-col_title, col_model = st.columns([3, 1])
-with col_title:
-    st.title("🧠 Makine Öğrenimi ile Erken Arıza Tespiti")
-    st.markdown("**Gerçek zamanlı sensör verilerinden makine kalan ömrü (RUL) tahmini**")
-with col_model:
-    st.markdown("<br>", unsafe_allow_html=True)  # Dikey hizalama için boşluk
-    selected_model = st.selectbox(
-        "Model Seç:",
-        BEST_MODELS,
-        index=4,  # Varsayılan: Random Forest
-        help="En iyi 5 modelden birini seçin"
-    )
+# Başlık ve açıklama
+st.title("🧠 Makine Öğrenimi ile Erken Arıza Tespiti")
+st.markdown("**Gerçek zamanlı sensör verilerinden makine kalan ömrü (RUL) tahmini**")
 
 st.markdown("---")
+
+# Varsayılan model (manuel girişte değiştirilecek)
+selected_model = "Random Forest"
 
 # Model yükle
 model, scaler, features = load_models(selected_model)
@@ -205,7 +198,20 @@ elif data_source == "Dosya Yükle":
         st.stop()
 
 else:  # Manuel Giriş
-    st.subheader("✏️ Manuel Veri Girişi")
+    # Başlık ve model seçimi aynı hizada
+    col_header, col_model = st.columns([3, 1])
+    with col_header:
+        st.subheader("✏️ Manuel Veri Girişi")
+    with col_model:
+        selected_model = st.selectbox(
+            "Model Seç:",
+            BEST_MODELS,
+            index=4,  # Varsayılan: Random Forest
+            help="En iyi 5 modelden birini seçin"
+        )
+        # Seçilen modele göre modeli yeniden yükle
+        model, scaler, features = load_models(selected_model)
+    
     st.markdown("**Tüm sensör değerlerini girin:**")
     
     # Ana sensörler
